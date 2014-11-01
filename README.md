@@ -2,9 +2,9 @@
 
 ...but I was always having to hunt around for the HEX codes.
 
-So I made [this tool](http://collegeman.github.io/flat-ui-colors).
+So I made [this tool](https://collegeman.github.io/flat-ui-colors).
 
-[http://collegeman.github.io/flat-ui-colors](http://collegeman.github.io/flat-ui-colors)
+[https://collegeman.github.io/flat-ui-colors](https://collegeman.github.io/flat-ui-colors)
 
 Twenty colors * seven shades = 140 colors = everything you need for beauty-through-color.
 

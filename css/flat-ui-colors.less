@@ -1,0 +1,294 @@
+@turquoise: #1ABC9C;
+@greensea: #16A085;
+@emerald: #2ECC71;
+@nephritis: #27AE60;
+@peterriver: #3498DB;
+@belizehole: #2980B9;
+@amethyst: #9B59B6;
+@wisteria: #8E44AD;
+@wetasphalt: #34495E;
+@midnightblue: #2C3E50;
+@sunflower: #F1C40F;
+@carrot: #E67E22;
+@alizarin: #E74C3C;
+@clouds: #ECF0F1;
+@concrete: #95A5A6;
+@orange: #F39C12;
+@pumpkin: #D35400;
+@pomegranate: #C0392B;
+@silver: #BDC3C7;
+@asbestos: #7F8C8D;
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+.toolbar {
+  position: fixed;
+  display: block;
+  height: 60px;
+  width: 100%;
+  top: 50%;
+  margin-top: -30px;
+  background-color: darken(@wetasphalt, 15%);
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.row {
+  height: 25%;
+}
+
+.row > * {
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  width: 20%;
+  height: 100%;
+  float: left;
+  text-decoration: none;
+  position: relative;
+  cursor: help;
+}
+
+.buttons {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  margin-top: -25px;
+  top: 50%;
+  z-index: 10;
+}
+
+.buttons > * {
+  background-color: darken(@wetasphalt, 10%);
+  vertical-align: middle;
+  color: darken(@clouds, 10%);
+  border: none;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  margin: 0 5px;
+  outline: none;
+}
+
+.buttons > * > span {
+  font-size: 28px;
+  line-height: 48px;
+}
+
+.buttons > a > span {
+  line-height: 50px;
+  font-size: 32px;
+}
+
+.buttons > *:hover {
+  color: lighten(@clouds, 20%);
+}
+
+.notice {
+  height: 50px;
+  background-color: darken(@wetasphalt, 10%);
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  color: @clouds;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  z-index: 10000;
+}
+
+.notice input {
+  border: 0;
+  text-align: center;
+  color: @clouds;
+  background-color: darken(@wetasphalt, 5%);
+  height: 30px;
+  border: 2px solid darken(@wetasphalt, 5%);
+  border-radius: 5px;
+  width: 88px;
+  outline: none;
+  margin-left: 4px;
+}
+
+.notice > .swatch {
+  display: inline-block;
+  width: 40px;
+  height: 32px;
+  vertical-align: middle;
+  border-radius: 5px;
+  border: 2px solid @clouds;
+  margin-left: 4px;
+}
+
+.turquoise    { background-color: @turquoise; }
+.greensea     { background-color: @greensea; }
+.emerald      { background-color: @emerald; }
+.nephritis    { background-color: @nephritis; }
+.peterriver   { background-color: @peterriver; }
+.belizehole   { background-color: @belizehole; }
+.amethyst     { background-color: @amethyst; }
+.wisteria     { background-color: @wisteria; }
+.wetasphalt   { background-color: @wetasphalt; }
+.midnightblue { background-color: @midnightblue; }
+.sunflower    { background-color: @sunflower; }
+.carrot       { background-color: @carrot; }
+.alizarin     { background-color: @alizarin; }
+.clouds       { background-color: @clouds; }
+.concrete     { background-color: @concrete; }
+.orange       { background-color: @orange; }
+.pumpkin      { background-color: @pumpkin; }
+.pomegranate  { background-color: @pomegranate; }
+.silver       { background-color: @silver; }
+.asbestos     { background-color: @asbestos; }
+
+.dark {
+  .turquoise    { background-color: darken(@turquoise, 10%); }
+  .greensea     { background-color: darken(@greensea, 10%); }
+  .emerald      { background-color: darken(@emerald, 10%); }
+  .nephritis    { background-color: darken(@nephritis, 10%); }
+  .peterriver   { background-color: darken(@peterriver, 10%); }
+  .belizehole   { background-color: darken(@belizehole, 10%); }
+  .amethyst     { background-color: darken(@amethyst, 10%); }
+  .wisteria     { background-color: darken(@wisteria, 10%); }
+  .wetasphalt   { background-color: darken(@wetasphalt, 10%); }
+  .midnightblue { background-color: darken(@midnightblue, 10%); }
+  .sunflower    { background-color: darken(@sunflower, 10%); }
+  .carrot       { background-color: darken(@carrot, 10%); }
+  .alizarin     { background-color: darken(@alizarin, 10%); }
+  .clouds       { background-color: darken(@clouds, 10%); }
+  .concrete     { background-color: darken(@concrete, 10%); }
+  .orange       { background-color: darken(@orange, 10%); }
+  .pumpkin      { background-color: darken(@pumpkin, 10%); }
+  .pomegranate  { background-color: darken(@pomegranate, 10%); }
+  .silver       { background-color: darken(@silver, 10%); }
+  .asbestos     { background-color: darken(@asbestos, 10%); }
+}
+
+.darker {
+  .turquoise    { background-color: darken(@turquoise, 20%); }
+  .greensea     { background-color: darken(@greensea, 20%); }
+  .emerald      { background-color: darken(@emerald, 20%); }
+  .nephritis    { background-color: darken(@nephritis, 20%); }
+  .peterriver   { background-color: darken(@peterriver, 20%); }
+  .belizehole   { background-color: darken(@belizehole, 20%); }
+  .amethyst     { background-color: darken(@amethyst, 20%); }
+  .wisteria     { background-color: darken(@wisteria, 20%); }
+  .wetasphalt   { background-color: darken(@wetasphalt, 20%); }
+  .midnightblue { background-color: darken(@midnightblue, 20%); }
+  .sunflower    { background-color: darken(@sunflower, 20%); }
+  .carrot       { background-color: darken(@carrot, 20%); }
+  .alizarin     { background-color: darken(@alizarin, 20%); }
+  .clouds       { background-color: darken(@clouds, 20%); }
+  .concrete     { background-color: darken(@concrete, 20%); }
+  .orange       { background-color: darken(@orange, 20%); }
+  .pumpkin      { background-color: darken(@pumpkin, 20%); }
+  .pomegranate  { background-color: darken(@pomegranate, 20%); }
+  .silver       { background-color: darken(@silver, 20%); }
+  .asbestos     { background-color: darken(@asbestos, 20%); }
+}
+
+.darkest {
+  .turquoise    { background-color: darken(@turquoise, 30%); }
+  .greensea     { background-color: darken(@greensea, 30%); }
+  .emerald      { background-color: darken(@emerald, 30%); }
+  .nephritis    { background-color: darken(@nephritis, 30%); }
+  .peterriver   { background-color: darken(@peterriver, 30%); }
+  .belizehole   { background-color: darken(@belizehole, 30%); }
+  .amethyst     { background-color: darken(@amethyst, 30%); }
+  .wisteria     { background-color: darken(@wisteria, 30%); }
+  .wetasphalt   { background-color: darken(@wetasphalt, 30%); }
+  .midnightblue { background-color: darken(@midnightblue, 30%); }
+  .sunflower    { background-color: darken(@sunflower, 30%); }
+  .carrot       { background-color: darken(@carrot, 30%); }
+  .alizarin     { background-color: darken(@alizarin, 30%); }
+  .clouds       { background-color: darken(@clouds, 30%); }
+  .concrete     { background-color: darken(@concrete, 30%); }
+  .orange       { background-color: darken(@orange, 30%); }
+  .pumpkin      { background-color: darken(@pumpkin, 30%); }
+  .pomegranate  { background-color: darken(@pomegranate, 30%); }
+  .silver       { background-color: darken(@silver, 30%); }
+  .asbestos     { background-color: darken(@asbestos, 30%); }
+}
+
+.light {
+  .turquoise    { background-color: lighten(@turquoise, 10%); }
+  .greensea     { background-color: lighten(@greensea, 10%); }
+  .emerald      { background-color: lighten(@emerald, 10%); }
+  .nephritis    { background-color: lighten(@nephritis, 10%); }
+  .peterriver   { background-color: lighten(@peterriver, 10%); }
+  .belizehole   { background-color: lighten(@belizehole, 10%); }
+  .amethyst     { background-color: lighten(@amethyst, 10%); }
+  .wisteria     { background-color: lighten(@wisteria, 10%); }
+  .wetasphalt   { background-color: lighten(@wetasphalt, 10%); }
+  .midnightblue { background-color: lighten(@midnightblue, 10%); }
+  .sunflower    { background-color: lighten(@sunflower, 10%); }
+  .carrot       { background-color: lighten(@carrot, 10%); }
+  .alizarin     { background-color: lighten(@alizarin, 10%); }
+  .clouds       { background-color: lighten(@clouds, 10%); }
+  .concrete     { background-color: lighten(@concrete, 10%); }
+  .orange       { background-color: lighten(@orange, 10%); }
+  .pumpkin      { background-color: lighten(@pumpkin, 10%); }
+  .pomegranate  { background-color: lighten(@pomegranate, 10%); }
+  .silver       { background-color: lighten(@silver, 10%); }
+  .asbestos     { background-color: lighten(@asbestos, 10%); }
+}
+
+.lighter {
+  .turquoise    { background-color: lighten(@turquoise, 20%); }
+  .greensea     { background-color: lighten(@greensea, 20%); }
+  .emerald      { background-color: lighten(@emerald, 20%); }
+  .nephritis    { background-color: lighten(@nephritis, 20%); }
+  .peterriver   { background-color: lighten(@peterriver, 20%); }
+  .belizehole   { background-color: lighten(@belizehole, 20%); }
+  .amethyst     { background-color: lighten(@amethyst, 20%); }
+  .wisteria     { background-color: lighten(@wisteria, 20%); }
+  .wetasphalt   { background-color: lighten(@wetasphalt, 20%); }
+  .midnightblue { background-color: lighten(@midnightblue, 20%); }
+  .sunflower    { background-color: lighten(@sunflower, 20%); }
+  .carrot       { background-color: lighten(@carrot, 20%); }
+  .alizarin     { background-color: lighten(@alizarin, 20%); }
+  .clouds       { background-color: lighten(@clouds, 20%); }
+  .concrete     { background-color: lighten(@concrete, 20%); }
+  .orange       { background-color: lighten(@orange, 20%); }
+  .pumpkin      { background-color: lighten(@pumpkin, 20%); }
+  .pomegranate  { background-color: lighten(@pomegranate, 20%); }
+  .silver       { background-color: lighten(@silver, 20%); }
+  .asbestos     { background-color: lighten(@asbestos, 20%); }
+}
+
+.lightest {
+  .turquoise    { background-color: lighten(@turquoise, 30%); }
+  .greensea     { background-color: lighten(@greensea, 30%); }
+  .emerald      { background-color: lighten(@emerald, 30%); }
+  .nephritis    { background-color: lighten(@nephritis, 30%); }
+  .peterriver   { background-color: lighten(@peterriver, 30%); }
+  .belizehole   { background-color: lighten(@belizehole, 30%); }
+  .amethyst     { background-color: lighten(@amethyst, 30%); }
+  .wisteria     { background-color: lighten(@wisteria, 30%); }
+  .wetasphalt   { background-color: lighten(@wetasphalt, 30%); }
+  .midnightblue { background-color: lighten(@midnightblue, 30%); }
+  .sunflower    { background-color: lighten(@sunflower, 30%); }
+  .carrot       { background-color: lighten(@carrot, 30%); }
+  .alizarin     { background-color: lighten(@alizarin, 30%); }
+  .clouds       { background-color: lighten(@clouds, 30%); }
+  .concrete     { background-color: lighten(@concrete, 30%); }
+  .orange       { background-color: lighten(@orange, 30%); }
+  .pumpkin      { background-color: lighten(@pumpkin, 30%); }
+  .pomegranate  { background-color: lighten(@pomegranate, 30%); }
+  .silver       { background-color: lighten(@silver, 30%); }
+  .asbestos     { background-color: lighten(@asbestos, 30%); }
+}

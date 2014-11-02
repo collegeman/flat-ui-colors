@@ -8,15 +8,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Flat UI Colors | The color palette from Designmodo's Flat UI</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet/less" type="text/css" href="css/flat-ui-colors.less" />
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.5/less.min.js"></script>
     </head>
     <body class="">
         <div id="pannable" class="container">
@@ -50,9 +47,9 @@
           </div>
         </div>
         <div class="buttons">
-          <button onclick="$(window).trigger('lighten-palette');"><span class="fa fa-lightbulb-o"></span></button>
-          <button onclick="$(window).trigger('darken-palette');"><span class="fa fa-moon-o"></span></button>
-          <button onclick="$(window).trigger('reset-palette');"><span class="fa fa-refresh"></span></button>
+          <a href="javascript:;" onclick="$(window).trigger('lighten-palette');"><span class="fa fa-lightbulb-o"></span></a>
+          <a href="javascript:;" onclick="$(window).trigger('darken-palette');"><span class="fa fa-moon-o"></span></a>
+          <a href="javascript:;" onclick="$(window).trigger('reset-palette');"><span class="fa fa-refresh"></span></a>
           <a href="http://github.com/collegeman/flat-ui-colors" title="Fork on GitHub" target="_blank"><span class="fa fa-github"></span></a>
         </div>
         <div class="notice animated bounceInDown" style="display:none;">
@@ -60,82 +57,17 @@
           <input type="text" value="000000" readonly>
           <span class="swatch"></span>
         </div>
-        <script>
-            $(function() {
-              var shades = [
-                    'darkest',
-                    'darker',
-                    'dark',
-                    'normal',
-                    'light',
-                    'lighter',
-                    'lightest'
-                  ],
-                  hexDigits = [
-                    "0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"
-                  ],
-                  currentShade = 3,
-                  $lastClicked = null,
-                  $notice = $('.notice'),
-                  $input = $notice.find('input'),
-                  $swatch = $notice.find('.swatch');
-
-              function rgb2hex(rgb) {
-                rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-                return hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
-              }
-
-              function hex(x) {
-                return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
-              }
-
-              function updateNotice() {
-                var rgb = $lastClicked.css('backgroundColor'),
-                    hex = rgb2hex(rgb);
-                $notice.show();
-                $input.val(hex).select();
-                $swatch.css('backgroundColor', rgb);
-              }
-
-              $(window).on('darken-palette', function() {
-                currentShade--;
-                if (currentShade < 0) {
-                  currentShade = 0;
-                }
-                $('body').removeClass().addClass(shades[currentShade]);
-                updateNotice();
-              });
-
-              $(window).on('lighten-palette', function() {
-                currentShade++;
-                if (currentShade === shades.length) {
-                  currentShade = shades.length - 1;
-                }
-                $('body').removeClass().addClass(shades[currentShade]);
-                updateNotice();
-              });
-
-              $(window).on('reset-palette', function() {
-                currentShade = 3;
-                $('body').removeClass().addClass(shades[currentShade]);
-                updateNotice();
-              });
-
-              $('.row > *').click(function(e) {
-                $lastClicked = $(e.target);
-                updateNotice();
-                return false;
-              });
-
-            });
-        </script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.5/less.min.js"></script>
+        <script src="js/main.js"></script>
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            ga('create','UA-5440532-12');ga('send','pageview');
         </script>
     </body>
 </html>
